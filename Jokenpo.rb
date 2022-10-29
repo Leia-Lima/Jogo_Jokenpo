@@ -1,7 +1,7 @@
 # Jogo_Jokenpo
 
-def calcula_vencedor (sua_escolha, pc_escolha)
-    resultado = (sua_escolha - pc_escolha % 3)
+def calcula_vencedor(sua_escolha, pc_escolha)
+    resultado = (sua_escolha - pc_escolha) % 3
 
     if resultado == 1
         'Você ganhou'
@@ -9,6 +9,7 @@ def calcula_vencedor (sua_escolha, pc_escolha)
         'PC Ganhou!'
     else
         'Deu empate!'
+    end
 end
 
     opcoes = {
@@ -21,28 +22,27 @@ end
 
     while novo_jogo == 's'
     
-        opcoes.each do |k,v|
+      opcoes.each do |k,v|
         puts "#{k} - #{v}"
-        end
+      end
 
-        print 'Escolha uma opção acima: '
-        sua_escolha = gets.to_i
+       print 'Escolha uma opção acima: '
+       sua_escolha = gets.to_i
 
-        while opcoes [sua_escolha].nil?
-            print 'Opção inválida! Escolha novamente:'
-            sua_escolha = gets.to_i
-        end
+       while opcoes [sua_escolha].nil?
+           print 'Opção inválida! Escolha novamente:'
+           sua_escolha = gets.to_i
+       end
     
-        pc_escolha = Random.rand (3) + 1
+       pc_escolha = Random.rand (3) + 1
 
-        puts "\nVocê escolheu #{opcoes[sua_escolha]}"
-        puts "O PC escolheu #{opcoes[pc_escolha]}\n\n"
+       puts "\nVocê escolheu #{opcoes[sua_escolha]}"
+       puts "O PC escolheu #{opcoes[pc_escolha]}\n\n"
 
-        print calcula_vencedor(sua_escolha, pc_escolha)
+       print calcula_vencedor(sua_escolha, pc_escolha)
 
-        print "\n\nDeseja jogar novamente? (s/n): "
-        novo_jogo = gets.chom
+       print "\n\nDeseja jogar novamente? (s/n): "
+       novo_jogo = gets.chom
     end
 
 puts "Obrigada por jogar!"
-end

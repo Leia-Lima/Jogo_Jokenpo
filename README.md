@@ -23,4 +23,7 @@ O jogador escolhe entre as opções abaixo:
 
 3 - Tesoura.
 
-Ao escolher sua opção
+Ao escolher sua opção, o jogo iniciará.
+
+![image](https://user-images.githubusercontent.com/59138400/199256105-58b034e0-ef66-4f47-9c69-e99290f6a582.png)
+
